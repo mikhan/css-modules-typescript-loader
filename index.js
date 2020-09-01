@@ -80,7 +80,7 @@ module.exports = function(content, ...rest) {
   let match;
   const cssModuleKeys = [];
 
-  const localExports = content.split('exports.locals')[1];
+  const localExports = content.split('___CSS_LOADER_EXPORT___.locals')[1];
 
   while ((match = keyRegex.exec(localExports))) {
     if (cssModuleKeys.indexOf(match[1]) < 0) {
